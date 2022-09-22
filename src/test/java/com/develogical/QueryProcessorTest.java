@@ -20,9 +20,16 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("Shakespeare"), containsString("playwright"));
     }
 
+    
+
     @Test
     public void knowsAboutName() throws Exception {
-        assertThat(queryProcessor.process("name"), containsString("Mango_cake"));
+        assertThat(queryProcessor.process("abc213: what is your name"), containsString("Mango_cake"));
+    }
+
+    @Test
+    public void knowsAboutPlus() throws Exception {
+        assertThat(queryProcessor.process("abc213: what is 7 plus 18"), containsString("25"));
     }
 
     @Test
