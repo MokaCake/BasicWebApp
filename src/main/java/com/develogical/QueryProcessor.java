@@ -21,9 +21,9 @@ public class QueryProcessor {
             return Integer.toString(Integer.parseInt(parts[3]) * Integer.parseInt(parts[6]));
         }
 
-        if (query.toLowerCase().contains("the largest")) {
+        if (query.toLowerCase().contains("is the largest")) {
             String[] sub = query.split(":");
-            String[] parts = sub[2].split(",");
+            String[] parts = sub[2].split(", ");
             int[] parts_num = new int[parts.length];
             int max = Integer.MIN_VALUE;
             for (int i = 0; i < parts.length; i ++){
@@ -37,7 +37,7 @@ public class QueryProcessor {
             return Integer.toString(max);
         }
         
-
+        
         return "";
     }
 }
