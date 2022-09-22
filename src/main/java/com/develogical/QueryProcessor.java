@@ -11,7 +11,27 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("name")) {
             return "Mango_cake";
         }
+        if (query.toLowerCase().contains("plus")) {
+            String[] parts = query.split(" ");
+            return Integer.toString(Integer.parseInt(parts[2]) + Integer.parseInt(parts[4]));
+        }
 
+        if (query.toLowerCase().contains("the largest")) {
+            String[] sub = query.split(":");
+            String[] parts = sub[1].split(",");
+            int[] parts_num = new int[parts.length];
+            int max = Integer.MIN_VALUE;
+            for (int i = 0; i < parts.length; i ++){
+                parts_num[i] = Integer.parseInt(parts[i]);
+            }
+            for (int i = 0; i < parts.length; i ++){
+                if (max < parts_num[i]){
+                    max = parts_num[i];
+                }
+            }
+            return Integer.toString(max);
+        }
+        
         return "";
     }
 }
