@@ -13,7 +13,7 @@ public class QueryProcessor {
         }
         if (query.toLowerCase().contains("plus")) {
             String[] parts = query.split(" ");
-            return Integer.toString(Integer.parseInt(parts[2]) + Integer.parseInt(parts[4]));
+            return Integer.toString(Integer.parseInt(parts[3]) + Integer.parseInt(parts[5]));
         }
 
         
