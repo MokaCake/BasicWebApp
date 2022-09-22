@@ -16,6 +16,11 @@ public class QueryProcessor {
             return Integer.toString(Integer.parseInt(parts[3]) + Integer.parseInt(parts[5]));
         }
 
+        if (query.toLowerCase().contains("multiplied")) {
+            String[] parts = query.split(" ");
+            return Integer.toString(Integer.parseInt(parts[3]) * Integer.parseInt(parts[5]));
+        }
+
         if (query.toLowerCase().contains("the largest")) {
             String[] sub = query.split(":");
             String[] parts = sub[2].split(",");
