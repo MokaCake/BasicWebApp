@@ -18,7 +18,7 @@ public class QueryProcessor {
 
         if (query.toLowerCase().contains("multiplied")) {
             String[] parts = query.split(" ");
-            return Integer.toString(Integer.parseInt(parts[3]) * Integer.parseInt(parts[5]));
+            return Integer.toString(Integer.parseInt(parts[3]) * Integer.parseInt(parts[6]));
         }
 
         if (query.toLowerCase().contains("the largest")) {
